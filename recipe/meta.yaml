@@ -29,12 +29,16 @@ requirements:
     - rich
     - requests
     - pydantic >=2
-    - tomlkit
     - conda >=24.1
+    - tomli
+    - tomli-w
 
 test:
   imports:
+    - anaconda_assistant_conda
     - anaconda_assistant_conda.plugin
+    - anaconda_assistant_conda.config
+    - anaconda_assistant_conda.debug_config
   commands:
     - pip check
   requires:
